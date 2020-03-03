@@ -37,11 +37,12 @@ DATABASE_URL = < your database from heroku ></li>
         - student.css
 
      - js
-          -cf.js
+        - cf.js
      - cf.html
      - home.html
      - student.html
--src
+     
+- src
      - models
         - database
             - queries
