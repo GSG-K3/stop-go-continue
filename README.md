@@ -58,12 +58,13 @@ DATABASE_URL = < your database from heroku ></li>
 
 
 <h3>DB Schema:</h3>
-<img src="https://user-images.githubusercontent.com/57197216/75767720-eb4f6200-5d4b-11ea-887d-f1a1a0e956f9.png">
+<img src="https://user-images.githubusercontent.com/57197216/75772987-aaf4e180-5d55-11ea-9f42-cf57fddf8263.jpg">
 
 <h3>Team</h3>
-<ul>
-<li>Banan</li>
-<li>Hussen</li>
-<li>Nidaa</li>
-<li>Rahaf</li>
-</ul>
+ 
+ - [Banan](https://github.com/bananhaj)
+ - [Hussein](https://github.com/Hussein-shahatet97)
+ - [Nidaa](https://github.com/nidaa-awawdeh)
+ - [Rahaf](https://github.com/rahaf-96)
+
+
