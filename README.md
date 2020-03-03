@@ -57,7 +57,7 @@ DATABASE_URL = < your database from heroku ></li>
 
 
 <h3>DB Schema:</h3>
-<img src="![schema](https://user-images.githubusercontent.com/57197216/75767720-eb4f6200-5d4b-11ea-887d-f1a1a0e956f9.png)">
+<img src="https://user-images.githubusercontent.com/57197216/75767720-eb4f6200-5d4b-11ea-887d-f1a1a0e956f9.png">
 
 <h3>Team</h3>
 <ul>
