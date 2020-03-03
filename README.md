@@ -62,7 +62,7 @@ DATABASE_URL = < your database from heroku ></li>
 <h3>Team</h3>
 <ul>
 <li>Banan</li>
-<li>nidaa</li>
-<li>hussen</li>
+<li>Hussen</li>
+<li>Nidaa</li>
 <li>Rahaf</li>
 </ul>
