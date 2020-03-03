@@ -10,7 +10,10 @@
 
 
 <h3>User Journy:</h3>
-<p>* A game consist of feedback of students in the cohort, that reflects their recent experiences, and student give their suggestions about things they want to change to move forward.</p>
+<p>* User enter the home page to sign in or sign up.
+   * If the user is a student it goes to the student page to gives its feedback.
+   * If the user is a cf it goes to the cf page to see all feedbacks of the students.
+</p>
 
 <h3>How To Run our project: </h3>
 <ol>
@@ -28,17 +31,18 @@ DATABASE_URL = < your database from heroku ></li>
 <h3>File Structure:</h3>
 
 - public
-   - css
+     - css
         - cf.css
         - home.css
         - student.css
 
-   - js
-       - cf
-            -cf.js
-       - home.js
-       - student.js
-   - models
+     - js
+          -cf.js
+     - cf.html
+     - home.html
+     - student.html
+-src
+     - models
         - database
             - queries
                 - auth.js
@@ -47,7 +51,7 @@ DATABASE_URL = < your database from heroku ></li>
             - db_bulid.js
             - db_bulid.sql
             - db_connection.js
-   - server
+     - server
         - app.js
         - router.js
 
