@@ -9,4 +9,6 @@ const createTable = callback => {
     if (err) throw err;
   });
 };
+
+createTable();
 module.exports = createTable;
