@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <form action="/rejester" method="POST"> 
+    <h1>Register Section</h1>
+    <form action="/register" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="Enter your name">
         <label for="email">Email: </label>
@@ -15,14 +18,25 @@
         <label for="password"> Password: </label>
         <input type="password" name="password" placeholder="Enter your password">
         <label for="">User type</label>
-        <select name="user-type"> 
+        <select name="user-type">
             <option value="student">Student</option>
             <option value="cf">cf</option>
-         <input type="submit">
+            <input type="submit">
         </select>
 
-
+        <h1>
+            Login Section
+        </h1>
     </form>
-    
+
+    </form action="/login" method="POST">
+    <label for="email">Email: </label>
+    <input type="email" name="mail" placeholder="Enter Your email">
+    <label for="password"> Password: </label>
+    <input type="password" name="pass" placeholder="Enter your password">
+    <input type="submit">
+    </form>
+
 </body>
+
 </html>
