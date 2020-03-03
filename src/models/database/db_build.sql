@@ -1,8 +1,8 @@
 BEGIN;
- DROP TABLE IF EXISTS  Stop-Go-Continue,  user_info  CASCADE;
+ DROP TABLE IF EXISTS  stop_go_continue,  user_info  CASCADE;
 
 
- CREATE TABLE IF NOT EXISTS  user_info (
+ CREATE TABLE  user_info (
  id  SERIAL   PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   email  VARCHAR(50) NOT NULL,
@@ -11,13 +11,13 @@ BEGIN;
    img TEXT
  );
 
- CREATE TABLE IF NOT EXISTS  stop_go_continue (
+ CREATE TABLE   stop_go_continue (
       id  SERIAL   PRIMARY KEY,
       user_id INT NOT NULL,
        type VARCHAR (30) NOT NULL,
        description VARCHAR (255) NOT NULL,
        activitydate date
-     FOREIGN KEY (user_id)  REFERENCE user_info(id)
+     FOREIGN KEY (user_id)  REFERENCES user_info(id)
 
  );
 COMMIT;
