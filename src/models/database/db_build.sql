@@ -16,7 +16,7 @@ BEGIN;
       user_id INT NOT NULL,
        type VARCHAR (30) NOT NULL,
        description VARCHAR (255) NOT NULL,
-       activitydate date
+       activitydate date,
      FOREIGN KEY (user_id)  REFERENCES user_info(id)
 
  );
