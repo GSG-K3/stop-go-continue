@@ -1,10 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const path = require('path');
-const db = require('../models/database/db_build');
-const bodyParser = require('body-parser');
-const postData = require('../models/database/queries/postData');
-const getData = require('../models/database/queries/getData');
+const path = require("path");
+const db = require("../models/database/db_build");
+const bodyParser = require("body-parser");
+const postData = require("../models/database/queries/postData");
+const postActivity = require("../models/database/queries/postactivity");
+const getData = require("../models/database/queries/getData");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +24,13 @@ console.log(req.body)
 
 res.send("true");
 });
+
+router.post("/student", (req, response) => {
+  console.log(req.body);
+  postActivity( req.body);
+  response.redirect("/student.html");
+});
+
 
 
 module.exports = router;
