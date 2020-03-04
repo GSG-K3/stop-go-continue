@@ -1,10 +1,6 @@
 const connection = require('../db_connection');
 const bcrypt = require('bcryptjs');
 
-
-
-
-
 const postData = (reqBody) => {
     const { name, email, password, type} = reqBody;
 
@@ -16,7 +12,6 @@ const postData = (reqBody) => {
     }
  
     hashPassword(password, (err,hash) =>{
-        console.log(hash);
         sql = {
             text: "INSERT INTO user_info(name,email,password,type) VALUES($1,$2,$3,$4);",
             values: [name, email, hash,type]

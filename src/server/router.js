@@ -11,13 +11,11 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/register', (req, response) => {
-    console.log(req.body);
     postData(req.body);
     response.redirect('/');
 });
 
 router.post("/student", (req, response) => {
-  console.log(req.body);
   postActivity( req.body);
   response.redirect("/student.html");
 });
@@ -25,5 +23,11 @@ router.post("/student", (req, response) => {
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "..", "public", "home.html"));
 });
+
+ router.get("/cf", (req,response) =>{
+     getData((err,res) => {
+         response.send(res)
+     })
+ })
 
 module.exports = router;
