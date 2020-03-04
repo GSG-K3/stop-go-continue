@@ -12,17 +12,17 @@
 
 <body>
     <div class="container">
-        <form class="user_form" action="/login" method="POST">
+        <form class="user_form">
             <h1 class="form_title">
                 Welcome Back
             </h1>
             <label class="input_label" for="email">Email
-                <input class="form_input" type="email" name="email" placeholder="Enter Your email" required>
+                <input class="form_input" id="email" type="email" name="email" placeholder="Enter Your email" required>
             </label>
-            <label class="input_label" for="password"> Password
-                <input class="form_input" type="password" name="password" placeholder="Enter your password" required>
+            <label class="input_label"  for="password"> Password
+                <input class="form_input" id="password" type="password" name="password" placeholder="Enter your password" required>
             </label>
-            <input class="login_button" type="submit" value="Log in">
+            <button class="login_button" id="login_btn"  value="Log in"></button>
         </form>
         <a class="back" href="./home.html"> Back </a>
         <a href="./student.html">Student</a>
@@ -32,6 +32,7 @@
 
 
     <footer>Made with ♡ @2020</footer>
+    <script src="./js/login.js"></script>
 
 </body>
 

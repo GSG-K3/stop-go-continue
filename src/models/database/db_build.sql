@@ -13,14 +13,21 @@ CREATE TABLE user_info
   img TEXT
 );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a63fa973848f37b5fbb2bd3a6811ad722ae2800
 CREATE TABLE stop_go_continue
 (
   id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
+  user_id INT,
   type VARCHAR (30) ,
   description VARCHAR (255) NOT NULL,
   activitydate date,
   FOREIGN KEY (user_id)  REFERENCES user_info(id)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a63fa973848f37b5fbb2bd3a6811ad722ae2800
 );
 COMMIT;
