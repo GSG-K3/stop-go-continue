@@ -13,6 +13,12 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "..", "public", "home.html"));
 });
 
+router.post('/login',(req,res)=>{
+console.log(req.body)
+
+res.send("true");
+});
+
 router.post("/register", (req, response) => {
   postData(req.body);
   response.redirect("/login.html");
