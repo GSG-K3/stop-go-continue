@@ -19,10 +19,13 @@ router.get("/", (req, res) => {
 router.post("/login", (req, response) => {
   let plainPassword = req.body.password;
   let reqbody = req.body;
-
+ 
   authentication(reqbody, (err, res) => {
     let hashedPassword = res[0].password;
     bcrypt.compare(plainPassword, hashedPassword, (req, result) => {
+       let token = jwt.sign({email:res[0].email },'fffff') ;
+      response.cookie('email', token);
+      
       if (result === true) {
         if (res[0].type === "student") response.send({ usertype: "student" });
         if (res[0].type === "cf") response.send({ usertype: "cf" });
