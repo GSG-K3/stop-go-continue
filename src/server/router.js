@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const jwt = require('jsonwebtoken');
 const bodyParser = require("body-parser");
 const postData = require("../models/database/queries/postData");
 const postActivity = require("../models/database/queries/postactivity");
@@ -14,6 +15,8 @@ router.get("/", (req, res) => {
 });
 
 router.post('/login',(req,res)=>{
+
+
 console.log(req.body)
 
 res.send("true");
