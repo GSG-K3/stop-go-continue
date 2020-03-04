@@ -2,41 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet" />
+    <title>Stop Go Continue</title>
 </head>
 
 <body>
-    <h1>Register Section</h1>
-    <form action="/register" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" placeholder="Enter your name">
-        <label for="email">Email: </label>
-        <input type="email" name="email" placeholder="Enter Your email">
-        <label for="password"> Password: </label>
-        <input type="password" name="password" placeholder="Enter your password">
-        <label for="">User type</label>
-        <select name="user-type">
-            <option value="student">Student</option>
-            <option value="cf">cf</option>
-            <input type="submit">
-        </select>
+    <div class="title">
+        <h1>STOP GO CONTINUE</h1>
+        <h4>The Single Best Team Building Exercise</h4>
+    </div>
 
-        <h1>
-            Login Section
-        </h1>
-    </form>
+    <div class="container">
+        <img class="container__img" src="girl.png" alt="girl illustration image" />
+        <div class="buttons">
+            <button class="container__button">
+                <a href="./register.html">Create an account</a>
+            </button>
+            <button class="container__button">
+                <a href="./login.html">I have an account</a>
+            </button>
+        </div>
+        <!-- <img class="container__img" src="boy.png" alt="boy illustration image" /> -->
+    </div>
 
-    </form action="/login" method="POST">
-    <label for="email">Email: </label>
-    <input type="email" name="mail" placeholder="Enter Your email">
-    <label for="password"> Password: </label>
-    <input type="password" name="pass" placeholder="Enter your password">
-    <input type="submit">
-    </form>
-
+    <footer>Made with ♡ @2020</footer>
 </body>
 
 </html>
