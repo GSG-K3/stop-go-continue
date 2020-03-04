@@ -9,7 +9,6 @@ const hashPassword = (plainPassword, callback) => {
 const postData = reqBody => {
   const { name, email, password, type } = reqBody;
   hashPassword(password, (err, hash) => {
-    console.log(hash);
     sql = {
       text:
         "INSERT INTO user_info(name,email,password,type) VALUES($1,$2,$3,$4);",
