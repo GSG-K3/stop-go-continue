@@ -30,4 +30,5 @@ CREATE TABLE stop_go_continue
 =======
 >>>>>>> 1a63fa973848f37b5fbb2bd3a6811ad722ae2800
 );
+
 COMMIT;
