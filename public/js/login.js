@@ -24,6 +24,7 @@ login.addEventListener("click", e => {
     email: email.value,
     password: password.value
   };
+  console.log(info)
 
   apiCall(
     "POST",
