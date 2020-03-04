@@ -10,14 +10,8 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/register', (req, response) => {
-    // postData((err, res) => {
-    //     if (err) { console.log(err, "cannot connecting") }
-    //     else {
-    //         console.log(req.body);
-    //         response.redirect('/')
-    //     }
-    // });
     console.log(req.body);
+    postData(req.body);
     response.redirect('/');
 });
 router.get('/',(req,res) => {
