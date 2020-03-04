@@ -10,9 +10,10 @@ const getData = require("../models/database/queries/getData");
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.post("/register", (req, response) => {
-  console.log(req.body);
-  response.redirect("/");
+router.post('/register', (req, response) => {
+    console.log(req.body);
+    postData(req.body);
+    response.redirect('/');
 });
 
 router.post("/student", (req, response) => {
