@@ -23,4 +23,5 @@ CREATE TABLE stop_go_continue
   activitydate date,
   FOREIGN KEY (user_id)  REFERENCES user_info(id)
 );
+
 COMMIT;
