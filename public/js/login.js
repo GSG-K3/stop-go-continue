@@ -29,6 +29,7 @@ login.addEventListener("click", e => {
     "POST",
     "/login",
     res => {
+      if (res.usercheck === "not user") alert("You are not user in this website! you must signup first")
       if (res.usertype === "student") window.location = "/student.html";
       if (res.usertype === "cf") window.location = "/cf.html";
       if (res.usertype === "wrong password") alert("wrong password");

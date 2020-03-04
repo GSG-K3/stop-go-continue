@@ -20,15 +20,22 @@ router.post("/login", (req, response) => {
   let reqbody = req.body;
 
   authentication(reqbody, (err, res) => {
-    let hashedPassword = res[0].password;
-    bcrypt.compare(plainPassword, hashedPassword, (req, result) => {
-      if (result === true) {
-        if (res[0].type === "student") response.send({ usertype: "student" });
-        if (res[0].type === "cf") response.send({ usertype: "cf" });
-      } else {
-        response.send({ usertype: "wrong password" });
-      }
-    });
+    if (res.length !== 0) {
+      let hashedPassword = res[0].password;
+      bcrypt.compare(plainPassword, hashedPassword, (req, result) => {
+        if (result === true) {
+          if (res[0].type === "student") response.send({ usertype: "student" });
+          if (res[0].type === "cf") response.send({ usertype: "cf" });
+        } else {
+          response.send({ usertype: "wrong password" });
+        }
+      });
+
+    }
+    else {
+      response.send({ usercheck: "not user" })
+    }
+
   });
 });
 
@@ -43,10 +50,10 @@ router.post("/student", (req, response) => {
   response.redirect("/student.html");
 
 });
-router.get("/cf", (req,response) =>{
-    getData((err,res) => {
-        response.send(res)
-    })
+router.get("/cf", (req, response) => {
+  getData((err, res) => {
+    response.send(res)
+  })
 })
 
 
