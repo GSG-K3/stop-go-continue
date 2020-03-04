@@ -37,9 +37,17 @@ router.post("/register", (req, response) => {
   response.redirect("/login.html");
 });
 
+
 router.post("/student", (req, response) => {
   postActivity(req.body);
   response.redirect("/student.html");
+
 });
+router.get("/cf", (req,response) =>{
+    getData((err,res) => {
+        response.send(res)
+    })
+})
+
 
 module.exports = router;
