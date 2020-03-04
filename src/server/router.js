@@ -16,7 +16,13 @@ router.post('/register', (req, response) => {
 });
 router.get('/',(req,res) => {
     res.sendFile(path.join(__dirname,'..','..','public','home.html'))
-})
+});
+
+router.post('/login',(req,res)=>{
+console.log(req.body)
+
+res.send("true");
+});
 
 
 module.exports = router;
